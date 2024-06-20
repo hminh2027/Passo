@@ -1,7 +1,9 @@
+import { PriceList } from '@app/entities/price-list.entity';
 import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [],
+  imports: [TypeOrmModule.forFeature([PriceList])],
   controllers: [],
   providers: [],
 })

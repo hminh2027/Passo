@@ -18,6 +18,7 @@ export class DatabaseService implements IDatabaseService {
       password: this.configService.get('DATABASE_PASSWORD'),
       // TODO: config env var
       // logging: this.configService.get('NODE_ENV') === 'DEVELOPMENT',
+
       synchronize: true,
     };
 
