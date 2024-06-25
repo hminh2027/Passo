@@ -10,8 +10,6 @@ import {
   DATABASE_UPDATED_AT_FIELD_NAME,
 } from '~/constants/entity.constant';
 
-import { commonCommon } from '@passo/common/index';
-
 export abstract class BaseEntity {
   @PrimaryGeneratedColumn()
   id!: number;
