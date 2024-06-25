@@ -1,14 +1,16 @@
 import {
-  DATABASE_CREATED_AT_FIELD_NAME,
-  DATABASE_DELETED_AT_FIELD_NAME,
-  DATABASE_UPDATED_AT_FIELD_NAME,
-} from '../constants/entity.constant';
-import {
   CreateDateColumn,
   DeleteDateColumn,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import {
+  DATABASE_CREATED_AT_FIELD_NAME,
+  DATABASE_DELETED_AT_FIELD_NAME,
+  DATABASE_UPDATED_AT_FIELD_NAME,
+} from '~/constants/entity.constant';
+
+import { commonCommon } from '@passo/common/index';
 
 export abstract class BaseEntity {
   @PrimaryGeneratedColumn()

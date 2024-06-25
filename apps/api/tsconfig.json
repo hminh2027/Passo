@@ -12,5 +12,10 @@
   ],
   "compilerOptions": {
     "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+      "@passo/common/*": ["../../libs/common/src/*"],
+    }
   }
 }
