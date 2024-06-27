@@ -1,8 +1,8 @@
 import { registerAs } from '@nestjs/config';
 import { AppConfig } from './types/app-config.type';
-import validateConfig from 'app/common/utils/validate-config';
 
 import { IsEnum, IsInt, IsOptional, IsString, IsUrl, Max, Min } from 'class-validator';
+import validateConfig from '../utils/validate-config';
 
 enum Environment {
   Development = 'development',
@@ -46,8 +46,8 @@ export default registerAs<AppConfig>('app', () => {
     port: process.env.APP_PORT
       ? parseInt(process.env.APP_PORT, 10)
       : process.env.PORT
-        ? parseInt(process.env.PORT, 10)
-        : 3000,
+      ? parseInt(process.env.PORT, 10)
+      : 3000,
     apiPrefix: process.env.APP_API_PREFIX,
     apiVersion: process.env.APP_API_VERSION,
   };

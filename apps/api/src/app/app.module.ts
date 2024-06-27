@@ -1,3 +1,4 @@
+import { AuthModule } from './../modules/auth/auth.module';
 import { CustomerModule } from '../modules/customer/customer.module';
 import { CustomerGroupModule } from '../modules/customer_group/customer-group.module';
 import { DatabaseModule } from '../common/database/database.module';
@@ -14,6 +15,7 @@ import { SettingModule } from '../modules/setting/setting.module';
 
 @Module({
   imports: [
+    AuthModule,
     CustomerModule,
     CustomerGroupModule,
     PriceListModule,

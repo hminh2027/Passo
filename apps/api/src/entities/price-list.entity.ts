@@ -11,7 +11,7 @@ export class PriceList extends BaseEntity {
   @Column({ type: 'nvarchar' })
   name: string;
 
-  @Column({ type: 'boolean' })
+  @Column({ type: 'boolean', default: false })
   is_default: boolean;
 
   @OneToMany(() => CustomerGroup, (cg) => cg.price_list)
